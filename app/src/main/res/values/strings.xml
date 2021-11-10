@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ComposeLibrary</string>
+    <string name="cd_text_input">Text input</string>
+    <string name="cd_book_search_result_list">Book search result list</string>
 </resources>
