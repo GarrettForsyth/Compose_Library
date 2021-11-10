@@ -1,6 +1,4 @@
 import com.android.build.gradle.AppExtension
-import org.gradle.api.Project
-import org.gradle.kotlin.dsl.getByName
 
 /**
  * Configuration for the application module.
@@ -16,6 +14,25 @@ fun AppExtension.configureApplication() {
         getByName("release") {
             isMinifyEnabled = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+        }
+    }
+
+    val sharedTestDir = "src/sharedTest/"
+    sourceSets {
+        getByName("test") {
+            java { srcDir(sharedTestDir + "java") }
+            resources { srcDir(sharedTestDir + "resources") }
+        }
+
+        getByName("androidTest") {
+            java { srcDir(sharedTestDir + "java") }
+            resources { srcDir(sharedTestDir + "resources") }
+        }
+    }
+
+    testOptions {
+        unitTests {
+            isIncludeAndroidResources = true
         }
     }
 

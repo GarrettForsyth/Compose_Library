@@ -19,7 +19,7 @@ object Libraries {
             const val junit = "junit:junit:${Versions.junit}"
             const val mockk =  "io.mockk:mockk:${Versions.mockk}"
             const val mockkJVM = "io.mockk:mockk-agent-jvm:${Versions.mockk}"
-
+            const val robolectric = "org.robolectric:robolectric:${Versions.roboletric}"
         }
 
         object Feature {

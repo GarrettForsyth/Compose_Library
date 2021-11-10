@@ -4,6 +4,7 @@ object Versions {
     const val junit = "4.13.2"
     const val assertK = "0.25"
     const val mockk = "1.12.0"
+    const val roboletric = "4.6"
 
     object AndroidX {
         const val core = "1.6.0"

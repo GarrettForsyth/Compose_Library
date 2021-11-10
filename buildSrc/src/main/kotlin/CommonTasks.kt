@@ -17,4 +17,5 @@ fun Project.commonTasks() {
     tasks.withType<Test> {
         configureTests()
     }
+
 }
